@@ -1,0 +1,14 @@
+<div class="form-group">
+
+    <label for="actor">Add Actor</label>
+    <select id="actor" class="form-control" [(ngModel)]="fullName" selected="selected">
+      <option *ngFor="let item of actorsDB">{{item.name}}</option>
+    </select>
+
+    <label for="movie">To Movie</label>
+    <select id="movie" class="form-control" [(ngModel)]="title" selected="selected">
+      <option *ngFor="let item of moviesDB">{{item.title}}</option>
+    </select>
+
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onAddActor()">Add</button>
